@@ -1,0 +1,414 @@
+.container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand {
+  font-size: 1.5rem;
+  color: #2a5da1;
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px;
+}
+
+
+.navBtn,
+.navBtnPrimary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px; /* Ensures consistent width */
+  height: 48px;      /* Ensures consistent height */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBtn {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.navBtn:hover {
+  background: #2a5da1;
+  color: white;
+}
+
+.navBtnPrimary {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.navBtnPrimary:hover {
+  background: #0056b3;
+}
+/* Admin Button */
+.adminBtn {
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminBtn:hover {
+  background-color: #2d3748;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.loginButton {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.loginButton:hover {
+  background-color: #3182ce;
+}
+
+.errorMessage {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+}
+
+/* Admin Dashboard Styles */
+.adminContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statsCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.userCount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4299e1;
+  margin: 0.5rem 0;
+}
+
+.tableContainer {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usersTable th, .usersTable td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.usersTable th {
+  background-color: #f7fafc;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.usersTable tr:hover {
+  background-color: #f8fafc;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+/* Danger color variant */
+.danger {
+  border-left: 4px solid #e74c3c;
+}
+
+.danger .statIcon {
+  background-color: #e74c3c;
+}
+
+/* Navigation Button */
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #3498db;
+  border: 1px solid #3498db;
+  text-decoration: none;
+}
+
+.navButton:hover {
+  background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusBadge.approved {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.statusBadge.rejected {
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+
+.statusBadge.pending {
+  background-color: #fdebd0;
+  color: #f39c12;
+}
+
+/* Timeline */
+.activityTimeline {
+  margin-top: 20px;
+  border-left: 2px solid #eee;
+  padding-left: 20px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -26px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3498db;
+}
+
+.timelineContent {
+  background: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.appId {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.timelineDate {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+.error {
+  color: #e53e3e;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(to right, #98c5e9, #245551);
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.primaryBtn {
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  background-color: #eeeeee;
+}
+
+/* Features */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f6f8;
+}
+
+.featureGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.featureCard {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 50px;
+  background-color: #111827;
+  color: #d1d5db;
+}
+
+.footerLeft {
+  max-width: 300px;
+}
+
+.footerLogo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footerRight {
+  display: flex;
+  gap: 50px;
+}
+
+.footerRight div h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footerRight div p {
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.footerRight div p:hover {
+  color: #93c5fd;
+}
