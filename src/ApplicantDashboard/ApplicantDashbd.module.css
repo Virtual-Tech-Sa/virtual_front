@@ -1,0 +1,283 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1f2937;
+  text-align: center;
+  font-weight: 700;
+}
+
+.message {
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 6px solid #28a745;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 6px solid #dc3545;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.profileSection {
+  flex: 1 1 280px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #e5e7eb;
+}
+
+.uploadButton {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.uploadButton:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+}
+
+.fileInput {
+  display: none;
+}
+
+.statusBox {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.statusBox h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.statusIndicator {
+  background-color: #f3f4f6;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.detailsSection {
+  flex: 2 1 600px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.detailsSection h3 {
+  margin-bottom: 25px;
+  color: #111827;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.formRow {
+  margin-bottom: 20px;
+}
+
+.formRow label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #374151;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.readOnly {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.editButton,
+.saveButton {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.editButton:hover,
+.saveButton:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+}
+
+.cancelButton {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+}
+
+.cancelButton:hover {
+  background: linear-gradient(135deg, #5a6268, #4e555f);
+}
+
+.deleteButton {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.deleteButton:hover {
+  background: linear-gradient(135deg, #c82333, #b21f2d);
+}
+
+.logoutButton {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #dc3545, #b21f2d);
+  color: white;
+  align-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(135deg, #b21f2d, #991b1b);
+}
+
+.loading {
+  font-size: 18px;
+  text-align: center;
+  padding: 40px;
+  color: #555;
+}
+/* Back to Dashboard Button */
+.backButton {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .detailsSection,
+  .profileSection {
+    width: 100%;
+    max-width: 100%;
+  }
+}
